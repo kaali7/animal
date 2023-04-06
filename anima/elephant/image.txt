@@ -1,0 +1,10 @@
+anima/elephant/.african bush elephant.jpg
+anima/elephant/.african forest elephant.jpg
+anima/elephant/.asian elephant.jpg
+anima/elephant/.columbian mammoth.jpg
+anima/elephant/.loxodonta atlantica.jpg
+anima/elephant/.mammut americanum.jpg
+anima/elephant/.palaeoloxodon namadicus.jpg
+anima/elephant/.palaeoloxodon naumanni.jpg
+anima/elephant/.straight-tusked elephant.jpg
+anima/elephant/.woolly mammoth.jpg

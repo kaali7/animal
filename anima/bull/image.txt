@@ -1,0 +1,10 @@
+anima/bull/.american bison.jpg
+anima/bull/.aurochs.jpg
+anima/bull/.banteng.jpg
+anima/bull/.cattle.jpg
+anima/bull/.elk.jpg
+anima/bull/.gaur.jpg
+anima/bull/.gayal.jpg
+anima/bull/.moose.jpg
+anima/bull/.water buffalo.jpg
+anima/bull/.yak.jpg

@@ -1,0 +1,10 @@
+anima/horse/.akhal-teke.jpg
+anima/horse/.american quarter horse.jpg
+anima/horse/.andalusian horse.jpg
+anima/horse/.appaloosa.jpg
+anima/horse/.arabian horse.jpg
+anima/horse/.clydesdale horse.jpg
+anima/horse/.friesian horse.jpg
+anima/horse/.morgan horse.jpg
+anima/horse/.shire horse.jpg
+anima/horse/.thoroughbred.jpg

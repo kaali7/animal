@@ -1,0 +1,4 @@
+anima/donkey/.baudet du poitou donkey.jpg
+anima/donkey/.grand noir du berry donkey.jpg
+anima/donkey/.hinny donkey.jpg
+anima/donkey/.mule donkey.jpg

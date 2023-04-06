@@ -1,0 +1,10 @@
+anima/crab/.callinectes sapidus.jpg
+anima/crab/.cancer pagurus.jpg
+anima/crab/.european green crab.jpg
+anima/crab/.european spider crab.jpg
+anima/crab/.fiddler crab.jpg
+anima/crab/.ghost crabs.jpg
+anima/crab/.portunidae.jpg
+anima/crab/.portunus pelagicus.jpg
+anima/crab/.ranina ranina.jpg
+anima/crab/.spider crabs.jpg

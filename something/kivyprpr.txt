@@ -1,0 +1,497 @@
+*basic window create in kivy 
+*dislay hola sweety
+
+from kivy.app import App
+from kivy.uix.label import Label
+
+class myapp(App):
+    def build(self):
+        lab = Label(text ="hola Sweety!!:>",
+        font_size = "30sp", color="FFA556",
+        bold =True,italic=True)
+        return lab
+
+sweet = myapp()
+sweet.run()
+
+#---------------------------------------- 
+
+*how to create design with kvfile
+from kivy.app import App
+from kivy.lang import Builder
+
+sweety = Builder.load_string("""
+
+Label:
+   text:('hola sweety')
+   markup: True
+   font_size: '64pt'
+
+""")
+
+class kvfileApp(App):
+    def build(self):
+        return sweety
+
+kv = kvfileApp()
+kv.run()
+
+#----------------------------------------
+
+* Window
+from kivy.core.window import Window
+
+* change window background color
+Window.clearcolor = (1,1,1,1) # white color
+
+*rbg converted into kivy color
+color method : (235/255.0, 237/255.0, 79/255.0, 1)
+u what to change color so u can use the rbg_c_kiv.py 
+
+* change window size 
+Window.size = (lenght,breath)
+
+#----------------------------------------
+             **Layout**
+#----------------------------------------
+
+*BoxLayout
+* how to insert many label,input,button etc
+
+from kivy.uix.boxlayout import BoxLayout
+
+def build(self):
+    lay1 = BoxLayout(orientation="horizontal", spacing=5)
+    lay2 = BoxLayout(orientation="horizontal", spacing=5)
+
+    btn1 = Button(text="1")
+    btn2 = Button(text="2")
+    btn3 = Button(text="3")
+    btn4 = Button(text="4")
+    btn5 = Button(text="5")
+    btn6 = Button(text="6")
+
+    lay1.add_widget(btn1)
+    lay2.add_widget(btn2)
+    lay1.add_widget(btn3)
+    lay2.add_widget(btn4)
+    lay1.add_widget(btn5)
+    lay2.add_widget(btn6)
+
+    lay = BoxLayout(orientation="vertical")
+    
+    lay.add_widget(lay1)
+    lay.add_widget(lay2)
+
+    return lay
+
+spacing = num
+orientation = vertical & horizontal
+
+*in tag 
+<nameofclass>:
+    orientation:"vertical"
+
+    Button:
+        text: "sweet"
+        background_color:"#F7DC6F"
+        font_size:20
+    Button:
+        text: "sweety1"
+        background_color:"#FFA500"
+        font_size:20
+
+#----------------------------------------
+
+*GridLayout
+*how to create GridLayout 
+
+from kivy.uix.gridlayout import GridLayout
+
+def build(self):
+    lay = GridLayout(rows=2)
+
+    btn1 = Button(text="Sweety1")
+    btn2 = Button(text="Sweety2")
+    btn3 = Button(text="Sweety3")
+    btn4 = Button(text="Sweety4")
+
+    lay.add_widget(btn1)
+    lay.add_widget(btn2)
+    lay.add_widget(btn3)
+    lay.add_widget(btn4)
+
+    return lay
+
+
+rows = num
+cols = num
+row_force_default: num & none for True 
+row_default_height: num & none for True
+
+#-------------------------------------------------
+
+*AnchorLayout
+*how to create AnchorLayout in kivy
+
+from kivy.uix.anchorlayout import AnchorLayout
+
+class myapp(App):
+    def build(self):
+        lay = AnchorLayout(anchor_x="left", anchor_y="bottom")
+
+        btn = Button(text="button",size_hint=(None,None),width=200)
+
+        lay.add_widget(btn)
+        
+        return lay
+
+#-------------------------------------------------
+
+*floatlayout
+*how to create floatlayout
+
+from kivy.uix.floatlayout import FloatLayout
+
+class myapp(App):
+    def build(self):
+        lay = FloatLayout()
+
+        btn = Button(text="button",size_hint=(None,None),width=200,pos_hint={"center_x":0.5,"center_y":0.6})
+
+        lay.add_widget(btn)
+        
+        return lay
+
+#----------------------------------------------------------------------------
+
+*pagelayout
+*how to create pagelayout in kivy
+
+from kivy.uix.pagelayout import PageLayout
+
+class myapp(App):
+    def build(self):
+        lay = PageLayout()
+
+        btn1 = Button(text="button1",size_hint=(None,None),width=200,pos_hint={"center_x":0.5,"center_y":0.6})
+        btn2 = Button(text="button2",size_hint=(None,None),width=200,pos_hint={"center_x":0.5,"center_y":0.6})
+        
+        lay.add_widget(btn1)
+        lay.add_widget(btn2)
+        
+        return lay
+
+#----------------------------------------
+
+*RelativeLayout
+*how to create relativelayout in kivy
+
+from kivy.uix.relativelayout import RelativeLayout
+
+class myapp(App):
+    def build(self):
+        rel = RelativeLayout()
+
+        btn1 = Button(text="button1",
+            size_hint = (.2,.2),
+            pos = (100.0,110.0))
+
+        btn2 = Button(text="button2",
+            size_hint = (.2,.2),
+            pos = (80.0,90.0))
+
+        rel.add_widget(btn1)
+        rel.add_widget(btn2)
+
+        return rel
+
+#----------------------------------------
+
+*Stacklayout
+*how to create stacklayout in kivy
+
+from kivy.uix.stacklayout  import StackLayout
+
+class myapp(App):
+    def build(self):
+        sat = StackLayout(orientation ='tb-rl')
+
+        btn1 = Button(text="button1",
+            size_hint = (.2,.2))
+
+        btn2 = Button(text="button2",
+            size_hint = (.2,.2))
+
+        sat.add_widget(btn1)
+        sat.add_widget(btn2)
+
+        return sat 
+
+#----------------------------------------
+
+**label
+*crete label
+def build(self):
+    lab = Label(text="Hola Sweety!! :>")
+    return lab
+
+how to upadate name in label
+
+def build(self):
+    self.ids.nameofname.text = "hola"
+
+#----------------------------------------#
+
+**button
+*crete button
+
+from kivy.uix.button import Button
+def build(self):
+    btn = Button(text="click")
+
+size_hint_y = None,
+height=50,
+size_hint_x = None,
+width = 200
+text = "write some thing"
+color = "color name" like this : FFA556
+font_size = num in sp
+bold = True&False
+italic = True&False
+size_hint = (lenght, breath)  ex:(.1,.1)
+background_color = "color name" ex:FFA556
+
+*two type of giving positon
+pos =  (300,250)
+pos_hint={"center_x":0.10,"center_y":0.6}
+
+*funtion
+# press karene ke bat
+on_press = self.btn_def
+
+# press jhodne ke bat
+on_release = self.btn_def
+
+
+btn_def(self, btn):
+    print("hola")
+
+
+#------------------------------------------
+
+*image
+*insert image in window
+
+*from kivy.uix.image import Image
+def build(self):
+    img = Image(source="frinds.png")
+    return img
+
+*from kivy.uix.image import AsyncImage
+def build(self):
+    img = AsyncImage(source="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png")
+    return img
+
+size_hint = num in tuple ex:(0.1,0.2)
+
+#--------------------------------------------------
+
+* Textinput 
+* how to create input in kivy
+
+from kivy.uix.textinput import TextInput
+
+class myapp(App):
+    def build(self):
+        inp = Textinput()
+        return inp 
+
+font_size = 30
+
+*in kivy file
+
+<nameofclass>:
+    TextInput:
+        id: input
+        hint_text: 'enter text'
+        pos_hint : {'center_x': 0.9,'center_y':0.805}
+        *to concetd to funtion
+        on_text: app.funtionname()
+
+*funtion
+def process(self):
+    text = self.root.ids.input.text
+    print(text)
+
+*in kivyfile
+text= self.ids.nameofid.text
+print(text)
+
+#-------------------------------------------
+
+from kivy.app import App
+from kivy.uix.widget import Widget
+from kivy.graphics import Rectangle,Color
+
+class boxlay(Widget):
+    pass
+    #after information in .kv file
+
+class myapp(App):
+    def build(self):
+        return boxlay()
+
+sweet = myapp()
+sweet.run()
+
+*in kivy file
+<nameofclass>:
+
+    canvas:
+        Color:
+            rgba:1.0,1.0,0.0,1
+        
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+#-----------------------------------------------
+*how to get the .kv input text
+
+from kivy.properties import ObjectProperty
+
+class grid(Widget):
+
+    name = ObjectProperty(None)
+    password = ObjectProperty(None)
+    mess = ObjectProperty(None)
+
+    def press(self):
+        name = self.name.text
+        password = self.password.text
+        mess = self.mess.text
+
+        self.name.text = ""
+        self.password.text = ""
+        self.mess.text = ""
+
+        lab = f"name is {name}, password is {password} and message is {mess}"
+        # self.add_widget(Label(text=lab))
+        print(lab)
+
+*kvfile
+<grid>:
+
+    name:name
+    password:password
+    mess:mess
+
+    GridLayout:
+        cols:1
+        size:root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text : "Name: "
+            TextInput:
+                id:name
+                multiline:False
+            
+            Label:
+                text : "Password: "
+            TextInput:
+                id:password
+                multiline:False
+            
+            Label:
+                text : "Message: "
+            TextInput:
+                id:mess
+                multiline:False
+            
+        Button:
+            text:"Finish"
+            on_press:root.press()
+
+#----------------------------FileChooser-------------------------
+class design(Widget):
+
+    def selected(self, filename):
+        try:
+            # self.ids.image.source = filename[0]
+            print(filename[0])
+        except:
+            pass
+    
+<design>:
+    id:my_widget
+    BoxLayout:
+        orientation:"vertical"
+        size:root.width,root.height
+        spacing:20
+        padding:30
+
+        Image:
+            id: image
+            source:""
+
+        FileChooserIconView:
+            id: file 
+            on_selection: selected(file.selection)
+
+#------------------------Spelling---------------
+
+from kivy.core.spelling import Spelling
+
+class design(Widget):
+    
+    def press(self):
+
+    # inheret the spelling
+        s = Spelling()
+    
+    # select one languages in spelling
+        s.select_language('en_US')
+    
+    # how many languages in spelling 
+        # list_languages()
+        word = self.ids.textinput.text
+    
+    # suggest in spelling
+        optino = s.suggest(word)
+
+        self.ids.label.text = str(optino)
+
+Label:
+    id: label
+    text:"Hola!"
+    halign:"center"
+    valign:"middle"
+    font_size:30
+
+TextInput:
+    id: textinput
+    multiline: False
+    size_hint:(1,.5)
+    font_size:25
+
+Button:
+    text: "Finish"
+    size_hint:(1,.5)
+    font_size:32
+    on_press: root.press()
+
+#-------------------------Slider-----------------------------------
+from kivy.uix.slider import Slider
+
+
+class design(Widget):
+    def slide_it(self,*args):
+        self.ids.silder.text = str(args[1])
+        self.ids.silder.font_size = str(args[1]*5)
+
+
+

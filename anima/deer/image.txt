@@ -1,0 +1,10 @@
+anima/deer/.chital.jpg
+anima/deer/.european fallow deer.jpg
+anima/deer/.mule deer.jpg
+anima/deer/.muntjac.jpg
+anima/deer/.red deer.jpg
+anima/deer/.roe deer.jpg
+anima/deer/.sambar deer.jpg
+anima/deer/.sika deer.jpg
+anima/deer/.water deer.jpg
+anima/deer/.white-tailed deer.jpg

@@ -1,0 +1,10 @@
+anima/frog/.african dwarf frog.jpg
+anima/frog/.ceratophrys.jpg
+anima/frog/.glass frogs.jpg
+anima/frog/.hylidae.jpg
+anima/frog/.kaloula.jpg
+anima/frog/.lepidobatrachus.jpg
+anima/frog/.poison dart frog.jpg
+anima/frog/.rana.jpg
+anima/frog/.true frog.jpg
+anima/frog/.true toad.jpg

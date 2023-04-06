@@ -1,0 +1,4 @@
+anima/parrot/.budgerigar.jpg
+anima/parrot/.finches.jpg
+anima/parrot/.lovebirds.jpg
+anima/parrot/.parrot.jpg

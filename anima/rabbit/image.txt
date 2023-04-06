@@ -1,0 +1,9 @@
+anima/rabbit/.american fuzzy Lop.jpg
+anima/rabbit/.american rabbit.jpg
+anima/rabbit/.common tapeti.jpg
+anima/rabbit/.european rabbit.jpg
+anima/rabbit/.flemish giant rabbit.jpg
+anima/rabbit/.holland lop.jpg
+anima/rabbit/.mini lop.jpg
+anima/rabbit/.netherland dwarf rabbit.jpg
+anima/rabbit/.rex rabbit.jpg

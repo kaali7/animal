@@ -1,0 +1,5 @@
+anima/zebra/.chapman's zebra.jpg
+anima/zebra/.donkey.jpg
+anima/zebra/.grévy's zebra.jpg
+anima/zebra/.plains zebra.jpg
+anima/zebra/.quagga.jpg

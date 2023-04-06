@@ -1,0 +1,128 @@
+#-------common animal-----------#
+
+.bull      .cat      .chicken    .snake  
+.cow       .crow     .gorilla    .deer
+.dog       .donkey   .elephant   .frog     
+.horse     .lion     .wolf       .crab
+.monkey    .owl      .parrot     .peacock              
+.giraffe   .mouse    .rabbit     .zebra       
+.dolphin   .hamster  .penguin    .seal
+.turtle    .whale    .alligator  
+
+#-------work animal-----------#
+
+[[bull],[]], [[cat],[]], [[chicken],[]], [[snake],[]], [[cow],[]], [[crow],[]], [[gorilla],[]], [[deer],[]],
+[[dog],[]], [[donkey],[]], [[elephant],[]], [[frog],[]], [[horse],[]], [[lion],[]], [[wolf],[]], [[crab],[]],
+[[monkey],[]], [[owl],[]], [[parrot],[]], [[peacock],[]], [[giraffe],[]], [[mouse],[]], [[rabbit],[]], 
+[[zebra],[]], [[dolphin],[]], [[hamster],[]], [[penguin],[]], [[seal],[]], [[turtle],[]] ,[[whale][]], 
+[[alligator],[]]
+
+#-------main animal-----------#
+
+.cat
+.dog
+.cow
+.horse
+.monkey
+.wolf
+
+#-------cute animal-----------#
+
+.cat
+.dog
+.rabbit
+.parrot
+.hamster
+.turtle
+
+#-------sea animal-----------#
+
+.whale
+.turtle
+.dolphin
+.alligator
+.crab
+.seal
+
+#-------brid animal-----------#
+
+.penguin
+.peacock
+.chicken
+.parrot
+.owl
+.crow
+
+#-------veg animal-----------#
+
+.monkey
+.donkey
+.elephant
+.bull
+.zebra
+.deer
+
+#-------mammal animal-----------#
+
+.cow 
+.dog
+.wolf
+.monkey
+.lion
+.horse
+
+#-------reptile animal-----------#
+
+.turtle
+.crab
+.snake
+.frog
+.alligator
+.seal
+
+#-------big animal-----------#
+
+.giraffe
+.elephant
+.whale
+.gorilla
+.bull
+.cow
+
+#-------small animal-----------#
+
+#ljfdlksjlkajdflkjkldf
+.frog
+.mouse
+.owl
+.monkey
+.rabbit
+.parrot
+
+#--------write style---------#
+.Kingdom:
+.Class:
+.Lifespan:
+.Height:
+.Family
+.type of species:
+.behavouir:
+.communication:
+.intellignce:
+.food:
+
+#------------sound-name---------#
+
+happy
+sad
+enjoy
+fun
+angry
+hungry
+normal
+play
+fair
+
+#------------*-*-*-*---------#
+
+

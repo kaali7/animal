@@ -1,0 +1,10 @@
+anima/penguin/.adélie penguin.jpg
+anima/penguin/.african penguin.jpg
+anima/penguin/.chinstrap penguin.jpg
+anima/penguin/.emperor penguin.jpg
+anima/penguin/.galapagos penguin.jpg
+anima/penguin/.gentoo penguin.jpg
+anima/penguin/.king penguin.jpg
+anima/penguin/.little penguin.jpg
+anima/penguin/.macaroni penguin.jpg
+anima/penguin/.southern rockhopper penguin.jpg

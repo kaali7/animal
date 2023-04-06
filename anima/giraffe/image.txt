@@ -1,0 +1,10 @@
+anima/giraffe/.angolan giraffe.jpg
+anima/giraffe/.giraffe.jpg
+anima/giraffe/.kordofan giraffe.jpg
+anima/giraffe/.masai giraffe.jpg
+anima/giraffe/.northern giraffe.jpg
+anima/giraffe/.nubian giraffe.jpg
+anima/giraffe/.reticulated giraffe.jpg
+anima/giraffe/.south african giraffe.jpg
+anima/giraffe/.southern giraffe.jpg
+anima/giraffe/.west african giraffe.jpg

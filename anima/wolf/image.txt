@@ -1,0 +1,10 @@
+anima/wolf/.arabian wolf.jpg
+anima/wolf/.arctic wolf.jpg
+anima/wolf/.canis.jpg
+anima/wolf/.eastern wolf.jpg
+anima/wolf/.eurasian wolf.jpg
+anima/wolf/.indian wolf.jpg
+anima/wolf/.mexican wolf.jpg
+anima/wolf/.red wolf.jpg
+anima/wolf/.tundra wolf.jpg
+anima/wolf/.wolf.jpg

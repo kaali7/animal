@@ -1,0 +1,10 @@
+anima/mouse/.bank vole.jpg
+anima/mouse/.cotton rat.jpg
+anima/mouse/.hamster.jpg
+anima/mouse/.house mouse.jpg
+anima/mouse/.lemming.jpg
+anima/mouse/.microtus.jpg
+anima/mouse/.mongolian gerbil.jpg
+anima/mouse/.red-backed vole.jpg
+anima/mouse/.squirrels.jpg
+anima/mouse/.syrian hamster.jpg

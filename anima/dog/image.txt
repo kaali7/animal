@@ -1,0 +1,10 @@
+anima/dog/.alaskan malamute.jpg
+anima/dog/.australian cattle dog.jpg
+anima/dog/.australian shepherd.jpg
+anima/dog/.bernese mountain dog.jpg
+anima/dog/.border collie.jpg
+anima/dog/.german shepherd.jpg
+anima/dog/.labrador retriever.jpg
+anima/dog/.norwegian elkhound.jpg
+anima/dog/.siberian husky.jpg
+anima/dog/.vizsla.jpg

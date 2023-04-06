@@ -1,0 +1,10 @@
+anima/owl/.barn owl.jpg
+anima/owl/.boreal owl.jpg
+anima/owl/.burrowing owl.jpg
+anima/owl/.eastern screech owl.jpg
+anima/owl/.eurasian eagle-owl.jpg
+anima/owl/.great horned owl.jpg
+anima/owl/.long-eared owl.jpg
+anima/owl/.spectacled owl.jpg
+anima/owl/.stygian owl.jpg
+anima/owl/.tawny owl.jpg

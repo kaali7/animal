@@ -1,0 +1,9 @@
+anima/cow/angry.wav
+anima/cow/enjoy.wav
+anima/cow/fair.wav
+anima/cow/fun.wav
+anima/cow/happy.wav
+anima/cow/hungry.wav
+anima/cow/normal.wav
+anima/cow/play.wav
+anima/cow/sad.wav

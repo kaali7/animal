@@ -1,0 +1,6 @@
+anima/gorilla/.cross river gorilla.jpg
+anima/gorilla/.eastern gorilla.jpg
+anima/gorilla/.eastern lowland gorilla.jpg
+anima/gorilla/.mountain gorilla.jpg
+anima/gorilla/.western gorilla.jpg
+anima/gorilla/.western lowland gorilla.jpg

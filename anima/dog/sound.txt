@@ -1,0 +1,9 @@
+anima/dog/angry.mp3
+anima/dog/enjoy.mp3
+anima/dog/fair.mp3
+anima/dog/fun.wav
+anima/dog/happy.wav
+anima/dog/hungry.mp3
+anima/dog/normal.mp3
+anima/dog/play.mp3
+anima/dog/sad.wav

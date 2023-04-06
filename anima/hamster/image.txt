@@ -1,0 +1,9 @@
+anima/hamster/.campbell's dwarf hamster.jpg
+anima/hamster/.chinese hamster.jpg
+anima/hamster/.greater long-tailed hamster.jpg
+anima/hamster/.grey dwarf hamster.jpg
+anima/hamster/.mesocricetus.jpg
+anima/hamster/.mongolian hamster.jpg
+anima/hamster/.roborovski dwarf hamster.jpg
+anima/hamster/.syrian hamster.jpg
+anima/hamster/.winter white dwarf hamster.jpg

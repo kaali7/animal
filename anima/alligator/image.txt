@@ -1,0 +1,10 @@
+anima/alligator/.alligator.jpg
+anima/alligator/.american alligator.jpg
+anima/alligator/.american crocodile.jpg
+anima/alligator/.caiman.jpg
+anima/alligator/.chinese alligator.jpg
+anima/alligator/.dwarf crocodile.jpg
+anima/alligator/.freshwater crocodile.jpg
+anima/alligator/.gharial.jpg
+anima/alligator/.nile crocodile.jpg
+anima/alligator/.saltwater crocodile.jpg

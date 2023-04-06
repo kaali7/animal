@@ -1,0 +1,10 @@
+anima/seal/.antarctic fur seal.jpg
+anima/seal/.baikal seal.jpg
+anima/seal/.caribbean monk seal.jpg
+anima/seal/.harbor seal.jpg
+anima/seal/.harp.jpg
+anima/seal/.mediterranean monk seal.jpg
+anima/seal/.northern elephant seal.jpg
+anima/seal/.southern elephant seal.jpg
+anima/seal/.steller sea lion seal.jpg
+anima/seal/.walrus.jpg

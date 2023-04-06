@@ -1,0 +1,10 @@
+anima/crow/.american crow.jpg
+anima/crow/.carrion crow.jpg
+anima/crow/.chihuahuan raven.jpg
+anima/crow/.common raven.jpg
+anima/crow/.corvus.jpg
+anima/crow/.fish crow.jpg
+anima/crow/.little crow.jpg
+anima/crow/.little raven.jpg
+anima/crow/.rook.jpg
+anima/crow/.torresian crow.jpg

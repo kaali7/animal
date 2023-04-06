@@ -1,0 +1,10 @@
+anima/snake/.black mamba.jpg
+anima/snake/.boomslang.jpg
+anima/snake/.brown snake australia.jpg
+anima/snake/.cerastes.jpg
+anima/snake/.common taipan.jpg
+anima/snake/.european viper.jpg
+anima/snake/.forest cobra.jpg
+anima/snake/.tiger rattlesnake.jpg
+anima/snake/.tigersnake.jpg
+anima/snake/.yellow-bellied sea snake.jpg

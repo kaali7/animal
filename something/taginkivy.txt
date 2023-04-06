@@ -1,0 +1,682 @@
+################################
+u what open cmd in same location file u can this shot-cut
+=> ctrl+shift+C
+
+#kivymd location
+D:\python39\lib\site-packages\kivymd
+
+#-------------------------------------------------#
+       ## run one screen to another screen ##
+#-------------------------------------------------#
+
+#In kivy file
+app.root.get_screen('screen_name').refresh_lists()
+
+#In python file
+screen = self.manager.get_screen("screen_name")
+
+#-------------------------------------------------#
+            **Basic Kivy Window**
+#-------------------------------------------------#
+
+
+from kivy.app import App
+from kivy.core.window import Window
+from kivy.lang import Builder
+from kivy.uix.widget import Widget
+
+#design file load in this page
+Builder.load_file('design.kv')
+
+#window size set
+Window.size = (450,500)
+
+#function create for design
+class design(Widget):
+    pass
+
+#create app
+class myapp(App):
+    def build(self):
+        return design()
+
+# run owr app
+sweet = myapp()
+sweet.run()
+
+#-------------------------------------------------#
+              **TAGS_for_Markup_TEXT**
+#-------------------------------------------------#
+
+#bold
+[b]name[/b]
+
+#italic
+[i]name[/i]
+
+#color
+[color=ff0099]name[/color]
+
+#font_family
+[font=time]name[/font]
+
+#size of font
+[size=150]name[/size]
+
+# it be like square root up sign
+name[sup]name[/sup]
+
+# it be like opposite of [sup][/sup]
+name[sub]name[/sub]
+
+#underline the font 
+[u]name[/u]
+
+#cross the font in middle 
+[s]name[/s]
+
+#-------------------------------------------------#
+               **SOMETHING_IN_KIVY**
+#-------------------------------------------------#
+
+# id in kivyfile
+id = name
+
+# class in kivyfile
+<nameoffunction> like Label,Button,TextInput etc
+
+#new line for in string 
+name'\n'
+
+#-------------------------------------------------#
+                **WINDOW**
+#-------------------------------------------------#
+
+*if you window size height and width u can use this
+size:root.width, root.height
+
+#how to change background color in kivyfile
+canvas.before:
+    Color:
+        rgba: rgba("#ff0099")
+    Rectangle:
+        pos: self.pos
+        size: self.size
+
+
+#-------------------------------------------------#
+                **BUTTON**
+#-------------------------------------------------#
+
+Button:
+    text:"something"
+    on_press: add some funtion link on press time
+    on_release: add some funtion link on release time
+    on_state: add some funtion link on state time
+    border:bottom,right,top,left
+    background_color:('FFFF00') color name in hex 
+    font_size = num
+    size_hint = (num,num) in x,y
+    size_hint_x = num
+    size_hint_y = num
+    height = num
+    width = num
+    size = width,height
+    pos = (num,num) in x,y positon
+
+<RoundButton@Button>
+    background_color:0,0,0,0
+    canvas.before:
+        Color:
+            rgba:rgba('#ADFF2F')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius: [100]
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+#how to add image in Button
+Button:
+    text:"hello"
+    font_size:20
+    size_hint:.25,.25
+    pos_hint:{"center_x":0.5}
+    background_color:0,0,0,0
+    on_release:root.press()
+
+    Image:
+        source:"image/shinchan_family.jpg"
+        center_x:self.parent.center_x
+        center_y:self.parent.center_y
+
+#-------------------------------------------------#
+                **TEXTINPUT**
+#-------------------------------------------------#
+
+TextInput:
+    id: name
+    hint_text: 'some text' placeholder
+    pos_hint : {'center_x': num,'center_y':num}
+    size_hint: lenght,breath
+    on_text: app.funtionname()
+    multiline:False&True
+    halign: center
+    padding_y:num
+    padding_y:num
+    padding:num 
+
+#-------------------------------------------------#
+                **LABEL**
+#-------------------------------------------------#
+
+Label:
+    text:"name"
+    font_size: num
+    background_color:
+        1. rgba("#ff0099") color in hex
+        2. (1,0,0,1) this is rgba color
+    size:num
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    color: (0,1,0,1)
+    bold: True
+    italic: True
+    outline_color: (0,0,0,0.1)
+    outline_width: 3
+        
+#-------------------------------------------------#
+                **Image**
+#-------------------------------------------------#
+
+Image:
+    source:'frinds.png'
+    allow_stretch: True
+    keep_ratio: False
+
+#this is display link into image
+AsyncImage:
+    source:"https://static.remove.bg/remove-bg-web/a4391f37bcf9559ea5f1741ac3cee53c31ab75cc/assets/start-0e837dcc57769db2306d8d659f53555feb500b3c5d456879b9c843d1872e7baa.jpg"
+
+#-------------------------------------------------#
+                **BOXLAYOUT**
+#-------------------------------------------------#
+
+BoxLayout:
+    orientation:"vertical"&"horizontal"
+    spacing: num
+    padding: num
+
+#-------------------------------------------------#
+                **GRIDLAYOUT**
+#-------------------------------------------------#
+
+GridLayout:
+    cols: num
+    rows: num
+    orientation:'vertical'&'horizontal'
+
+#-------------------------------------------------#
+                **RELATIVELAYOUT**
+#-------------------------------------------------#
+
+RelativeLayout:
+    orientation: 'vertical'&'horizontal'
+    pos: self.pos
+    size: root.size
+
+#-------------------------------------------------#
+                **FloatLayout**
+#-------------------------------------------------#
+
+FloatLayout:
+    "x","y","top","bottom","left","right"
+    pos_hint: {} 
+
+#-------------------------------------------------#
+                **FileChooser**
+#-------------------------------------------------#
+
+FileChooserIconView:
+    id: file 
+    on_selection: root.selected(file.selection)
+
+#-------------------------------------------------#
+                **Slider**
+#-------------------------------------------------#
+
+Slider:
+    min:num         #start num
+    max:num         #last num
+    step: num       #step by step movie
+    orientation:vertical&horizontal
+    on_value: root.slide_it(*args)        # how to get value to with help of funtion
+
+#funtion
+def funtionname(self, *args)
+    print(args[1]) #get num
+
+#-------------------------------------------------#
+                **Accordion**
+#-------------------------------------------------#
+
+#it be like page
+
+Accordion: 
+    orientation:"vertical"&"horizontal"
+    
+    AccordionItem: # page in  Accordion
+        title: name
+        Image:
+        Label:
+        TextInput:
+        etc
+
+#-------------------------------------------------#
+                **Carousel**
+#-------------------------------------------------#
+
+#it be like a silder of item 
+
+Carousel:
+    direction: top,right,left,bottom
+
+    Image:
+        source:"frinds.png"
+    
+    AsyncImage:
+        source:"link"
+
+#-------------------------------------------------#
+                **CheckBoxes**
+#-------------------------------------------------#
+
+CheckBox:
+    #CheckBox is creat
+                          #imp     #imp
+    on_active: root.check(self, self.active, 'Green')
+
+@@how to convert CheckBox into radio Button
+CheckBox:
+    group:nameofgroup #add CheckBox into group
+
+
+#funtion
+how to get some thing in CheckBox   
+                #imp     #imp
+def check(self, instance, value, color):
+        print(color)
+
+#-------------------------------------------------#
+                **CheckBoxes**
+#-------------------------------------------------#
+#: import Factory kivy.factory.Factory
+<mypop@Popup>
+    auto_dismiss: False
+    title:"this is popup box"
+    Label:
+    TextInput:
+    Button:
+        on_release:root.dismiss()
+    etc
+
+<design>:
+    Button:
+        text:"popup"
+        on_release:Factory.mypop().open()
+
+#-------------------------------------------------#
+                **ScreenManger**
+#-------------------------------------------------#
+from kivy.uix.screenmanager import Screen,ScreenManager
+
+@@frist you can creat class of screen second u create a builder ok
+
+#we are in .py file 
+# screen 
+class Fristscree(Screen):
+    pass
+
+class Secondscree(Screen):
+    pass
+
+class WindowManager(ScreenManager):
+    pass
+
+#kivyfile
+WindowManager:
+    Fristscree:
+    Secondscree:
+
+#frist screen
+<Fristscree>:
+    name:"frist"
+    BoxLayout:
+    Label:
+    Button:
+        on_release:
+            app.root.current = "second"
+            root.manager.transition.direction = "left"
+    etc
+
+#second screen
+<Secondscree>:
+    name:"second"
+    BoxLayout:
+    Label:
+    Button:
+        on_release:
+            app.root.current = "second"
+            root.manager.transition.direction = "left"
+    etc
+
+#-------------------------------------------------#
+                **Spinner**
+#-------------------------------------------------#
+# it be like option list
+Spinner:
+    id: spinner
+    text:"color"
+    values:["Blue","Black","Orange"]
+    on_text: root.spinner_def(spinner.text)
+
+#funtion
+class design(Widget):
+    def spinner_def(self, value):
+        self.ids.label.text = value 
+
+#-------------------------------------------------#
+                **Spinner**
+#-------------------------------------------------#
+# create divider between in two thing
+Splitter:
+    sizable_from :top,bottom,right,&,left
+    Label:
+    Button:
+    TextInput:
+    etc
+
+#-------------------------------------------------#
+                **TabbedPanel**
+#-------------------------------------------------#
+
+from kivy.uix.tabbedpanel import TabbedPanel
+
+#function create for design
+class design(TabbedPanel):
+    pass
+
+do_default_tab: False
+tab_pos:"left_mid",top_mid,top_right,etc
+
+TabbedPanelItem:
+    text:"tab1"
+
+    Label:
+        text:"hello1"
+
+TabbedPanelItem:
+    text:"tab2"
+    Label:
+       text:"hello2"
+
+#-------------------------------------------------#
+                **Animation**
+#-------------------------------------------------#
+
+#in kivyfile
+Button:
+    text:"Button"
+    font_size:30
+    size_hint:.5,.5
+    pos_hint:{"center_x":0.5}
+
+    #join we animation 
+    on_release:root.press(self)
+
+
+#in .py file
+#function create for design
+class design(Widget):
+    def press(self,widget,*args):
+
+        animate = Animation(
+            background_color = (0,0,1,1),
+            duration =1,
+        )
+
+        animate+= Animation(size_hint = (1,1))
+
+        animate+= Animation(size_hint = (.5,.5))
+
+        animate+= Animation(pos_hint={"center_x":0.2})
+
+        animate+= Animation(pos_hint={"center_x":0.5})
+
+        animate+= Animation(pos_hint={"center_x":0.8})
+
+        animate+= Animation(pos_hint={"center_x":0.5})
+
+        animate.start(widget)
+
+        animate.bind(on_complete =self.call)
+
+    def call(self, *args):
+        self.ids.label.text = "this is good!:>"
+
+#-------------------------------------------------#
+                **ProgressBar**
+#-------------------------------------------------#
+# it be like loding......
+ProgressBar:
+    id: progras
+    value:.25
+    min: 0
+    max: 1
+    pos_hint:{'x':.1}
+    size_hint_x:.8
+
+    Button:
+    text:"hola"
+    on_release:root.press()
+
+#.py file
+def press(self):
+    cur = self.ids.progras.value
+    if cur == 1:
+        cur = 0
+    cur += .25
+    self.ids.progras.value = cur
+
+#-------------------------------------------------#
+                **Switch**
+#-------------------------------------------------#
+
+#in kivyfile
+Switch:
+    active: True
+    disabled: True
+    font_size:30
+    on_active:root.switch(self, self.active)
+
+#in .py
+def switch(self,switchObject, switchValue):
+    if (switchValue):
+        self.ids.label.text = "ON"
+    else:
+        self.ids.label.text = 'OFF'
+
+#-------------------------------------------------#
+            **MDAppp use in inkivy**
+#-------------------------------------------------#
+
+Screen:
+    MDCard:
+        orientation:"vertical"
+        padding:"8dp"
+        size_hint:None,None
+        size:"280dp","180dp"
+        pos_hint:{"center_x":.5,"center_y":.5}
+        elevation:10
+        spacing:25
+
+        MDLabel:
+            text:"HOLA!  :>"   
+            theme_text_color:"Secondary"
+            size_hint_y:None
+            height:self.texture_size[1]
+
+        MDSeparator:
+            height:'1dp'
+    
+        MDLabel:
+            text:"Sweety"
+
+    Screen:
+        MDSlider:
+            min:0
+            max:100
+            value:40
+
+#-------------------------------------------------#
+            **MD Color Themes**
+#-------------------------------------------------#
+
+some color theme in MDApp
+color: Red, Pink, Purple, DeepPurple, Indigo, 
+Blue, LightBlue, Cyan, Teal, Green, LightGreen,
+Lime, Yellow, Amber, Orange, DeepOrange, Brown,
+Gray, BlueGray
+
+# in .py file 
+class myapp(MDApp):
+    def build(self):
+        self.theme_cls.theme_style = "Dark"
+        self.theme_cls.primary_palette = "Blue"
+        self.theme_cls.accent_palette = "Red"
+
+        return Builder.load_file('design.kv')
+
+# in kivyfile
+Screen:
+    MDRaisedButton:
+        text:"frist"
+        pos_hint:{"center_x":0.5,"center_y":0.6}
+        md_bg_color:app.theme_cls.primary_light
+
+    MDRaisedButton:
+        text:"thrid"
+        pos_hint:{"center_x":0.5,"center_y":0.4}
+        md_bg_color:app.theme_cls.primary_dark
+
+
+#-------------------------------------------------#
+            **MD TextInput design**
+#-------------------------------------------------#
+#it will be in round shap
+MDTextFieldRound:
+    icon_right:"account" #icon in right side 
+    password: True&False  #it create num into dot 
+
+#-------------------------------------------------#
+            **MD Button design**
+#-------------------------------------------------#
+
+#it will be in round shap 
+MDRoundFlatButton:
+
+#-------------------------------------------------#
+            **MDToolbar**
+#-------------------------------------------------#
+
+
+MDBoxLayout:
+    orientation:"vertical"
+
+    MDToolbar:
+        title:"our tool bar"
+        left_action_items:[["menu"]]
+        right_action_items:[["dots-vertical"]]
+
+    MDBottomAppBar:
+        MDToolbar:
+            icon:'git'
+            title:"bottom menu"
+            left_action_items:[["menu"]]
+            type:"bottom"
+            mode:"end"
+
+            on_action_button:app.press()
+
+#-------------------------------------------------#
+            **something**
+#-------------------------------------------------#
+
+GridLayout:
+                            cols:3
+
+                            Button:
+                                text: "<"
+                                on_release:siler.load_previous()
+
+                            Carousel:
+                                id:siler
+                                Image:
+                                    source:r"anima\lion\.barbary lion.jpg"
+
+                                Image:
+                                    source:r"anima\lion\.congo lion.jpg"
+
+                                Image:
+                                    source:r"anima\lion\.lion.jpg"
+
+                                Image:
+                                    source:r"anima\lion\.panthera leo melanochaita.jpg"
+
+                                Image:
+                                    source:r"anima\lion\.panthera.jpg"
+
+                                Image:
+                                    source:r"anima\lion\.transvaal lion.jpg"
+
+                            Button:
+                                text: ">"
+                                on_release:siler.load_next()
+
+
+Box_album:#boxlayout
+
+                                Card_album:
+                                    Fit_album:                       
+
+                                    BoxMD_album:                                                              
+
+                                Card_album:
+                                    Fit_album:
+
+                                    BoxMD_album:             
+
+                                Card_album:
+                                    Fit_album:
+                                        
+                                    BoxMD_album:
+                                    
+                                Card_album:
+                                    Fit_album:
+                                        
+                                    BoxMD_album: 
+
+                                Card_album:
+                                    Fit_album:
+                                    
+                                    BoxMD_album:  
+
+                                Card_album:
+                                    Fit_album:
+                                        
+                                    BoxMD_album:    

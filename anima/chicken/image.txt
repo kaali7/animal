@@ -1,0 +1,10 @@
+anima/chicken/.australorps.jpg
+anima/chicken/.barnevelder.jpg
+anima/chicken/.bielefelder.jpg
+anima/chicken/.black star.jpg
+anima/chicken/.brahma.jpg
+anima/chicken/.buckeye.jpg
+anima/chicken/.chantecler.jpg
+anima/chicken/.delaware.jpg
+anima/chicken/.jersey giant.jpg
+anima/chicken/.maran.jpg

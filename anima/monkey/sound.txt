@@ -1,0 +1,9 @@
+anima/monkey/angry.wav
+anima/monkey/enjoy.wav
+anima/monkey/fair.wav
+anima/monkey/fun.wav
+anima/monkey/happy.wav
+anima/monkey/hungry.wav
+anima/monkey/normal.wav
+anima/monkey/play.wav
+anima/monkey/sad.wav

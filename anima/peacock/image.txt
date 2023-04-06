@@ -1,0 +1,10 @@
+anima/peacock/.congo peafowl.jpg
+anima/peacock/.galliformes.jpg
+anima/peacock/.green peafowl.jpg
+anima/peacock/.grey peacock-pheasant.jpg
+anima/peacock/.indian peafowl.jpg
+anima/peacock/.pavo.jpg
+anima/peacock/.peacock-pheasant.jpg
+anima/peacock/.phasianidae.jpg
+anima/peacock/.phasianus.jpg
+anima/peacock/.tragopan.jpg

@@ -1,0 +1,8 @@
+anima/turtle/.flatback sea turtle.jpg
+anima/turtle/.green sea turtle.jpg
+anima/turtle/.hawksbill sea turtle.jpg
+anima/turtle/.kemp's ridley sea turtle.jpg
+anima/turtle/.leatherback sea turtle.jpg
+anima/turtle/.loggerhead sea turtle.jpg
+anima/turtle/.olive ridley sea turtle.jpg
+anima/turtle/.sea turtles.jpg

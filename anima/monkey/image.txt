@@ -1,0 +1,10 @@
+anima/monkey/.bonnet macaque.jpg
+anima/monkey/.emperor tamarin.jpg
+anima/monkey/.golden snub-nosed monkey.jpg
+anima/monkey/.lesula.jpg
+anima/monkey/.lion-tailed macaque.jpg
+anima/monkey/.mandrill.jpg
+anima/monkey/.panamanian white-faced capuchin.jpg
+anima/monkey/.proboscis monkey.jpg
+anima/monkey/.rhesus macaque.jpg
+anima/monkey/.vervet monkey.jpg

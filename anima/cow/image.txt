@@ -1,0 +1,10 @@
+anima/cow/.amrit mahal.jpg
+anima/cow/.deoni cattle.jpg
+anima/cow/.gry cattle.jpg
+anima/cow/.hallikar.jpg
+anima/cow/.hariana cattle.jpg
+anima/cow/.kangayam cattle.jpg
+anima/cow/.khillari cattle.jpg
+anima/cow/.pulikulam.jpg
+anima/cow/.sahiwal cattle.jpg
+anima/cow/.umblachery.jpg

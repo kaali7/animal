@@ -1,0 +1,9 @@
+anima/whale/.beluga whale.jpg
+anima/whale/.blue whale.jpg
+anima/whale/.bowhead whale.jpg
+anima/whale/.false killer whale.jpg
+anima/whale/.fin whale.jpg
+anima/whale/.gray whale.jpg
+anima/whale/.humpback whale.jpg
+anima/whale/.orca.jpg
+anima/whale/.sperm whale.jpg

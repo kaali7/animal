@@ -1,0 +1,1986 @@
+#Sweety
+
+#This is desing of animal
+#--------------------------------------------------------------#
+# this is for album thing
+# ScrollView
+<Scroller@ScrollView>:
+    bar_color: (0,0,0,0)
+    bar_inactive_color: (0,0,0,0)
+    do_scroll_y:False
+    size_hint_y: None
+    height: 220
+
+# BoxLayout
+<Box_album@BoxLayout>:
+    orientation: 'horizontal'
+    size_hint_x:None
+    width:1320
+    spacing:15
+    padding:16
+
+# Inter in MDCard
+<ICard_album@MDCard>:
+    orientation: 'vertical'
+    size_hint:None,None
+    size:150,130
+    radius:[20,]
+
+#Outer in Card
+<OCard_album@MDCard>    
+    orientation: 'vertical'
+    size_hint:None,None
+    size:150,180
+    radius:[20,] 
+
+# FitImage
+<Fit_album@FitImage>:
+    radius:[20,]
+    pos_hint: {"center_x": .5, "center_y": .5}
+
+# what torrow you can do ,frist give all id to every okk---=======++++++==
+ 
+<HeartBut@MDIconButton>:
+    icon:"heart-circle"
+<HandBut@MDIconButton>:
+    icon:"hand-heart"
+
+<BookBut@MDIconButton>:
+    icon:"bookmark"  
+
+# this is main screen of app-++++---????????
+<Main>:
+    animal_fav:animal_fav
+    animal_history:animal_history
+    animal_liber:animal_liber
+    animal_like:animal_like
+
+    none_id_o:None_id_o
+    none_id_t:None_id_t
+    none_id_th:None_id_th
+    none_id_f:None_id_f
+
+    id:mainscre
+    BoxLayout:
+        orientation:"vertical"
+
+        # this is navbar 
+        MDToolbar:
+            title:"Animal"
+            left_action_items:[["image-outline"]] # :>  creat ur icon ok 
+            right_action_items:[["dots-vertical", lambda x: app.creating("navbar")]]
+        
+        # this is tap navber 
+        MDBottomNavigation:
+            
+            # this is for home tap
+            MDBottomNavigationItem:
+                name:'home'
+                text:"Home"
+                icon:"home-circle-outline"
+
+                ScrollView:
+
+                    BoxLayout:
+                        orientation:"vertical"
+                        spacing:30
+                        padding:20
+                        size_hint_y: None
+                        height: 3300
+
+                        # new add animal file silder images
+
+                        Carousel:
+                            id:siler
+                            loop:True
+                            direction:'right'
+
+                            Image:
+                                source:r"anima\lion\.barbary lion.jpg"
+
+                            Image:
+                                source:r"anima\lion\.congo lion.jpg"
+
+                            Image:
+                                source:r"anima\lion\.lion.jpg"
+
+                            Image:
+                                source:r"anima\lion\.panthera leo melanochaita.jpg"
+
+                            Image:
+                                source:r"anima\lion\.panthera.jpg"
+
+                            Image:
+                                source:r"anima\lion\.transvaal lion.jpg"
+
+
+                        #main animal 
+                        MDCard:
+                            orienation:"vetical"
+                            radius:[10,]
+                            size_hint_y:None
+                            height:50
+                            
+                            Label:                
+                                text:"[b]main animal[/b]"
+                                markup:True
+                                font_size:18
+                        
+                        Scroller:#silder
+                        
+                            Box_album:#boxlayout
+
+                                # Cat_card:
+                                OCard_album:
+                                    ICard_album:
+                                        text:"cat"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\cat\.cute cats.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_cat_o
+                                            on_release:root.like_list("cat")
+                                        HandBut:
+                                            id:hand_cat_o
+                                            on_release:root.fav_list("cat")
+                                        BookBut:
+                                            id:book_cat_o
+                                            on_release:root.liber_list("cat")                                                                                               
+                                
+                                OCard_album:
+                                    ICard_album:
+                                        text:"dog"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\dog\.german shepherd.jpg"   
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_dog_o
+                                            on_release:root.like_list("dog")
+                                        HandBut:
+                                            id:hand_dog_o
+                                            on_release:root.fav_list("dog")
+                                        BookBut:
+                                            id:book_dog_o
+                                            on_release:root.liber_list("dog")            
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"cow"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\cow\.sahiwal cattle.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_cow_o
+                                            on_release:root.like_list("cow")
+                                        HandBut:
+                                            id:hand_cow_o
+                                            on_release:root.fav_list("cow")
+                                        BookBut:
+                                            id:book_cow_o
+                                            on_release:root.liber_list("cow")
+                                    
+                                OCard_album:
+                                    ICard_album:
+                                        text:"horse"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\horse\.andalusian horse.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_horse_o
+                                            on_release:root.like_list("horse")
+                                        HandBut:
+                                            id:hand_horse_o
+                                            on_release:root.fav_list("horse")
+                                        BookBut:
+                                            id:book_horse_o
+                                            on_release:root.liber_list("horse") 
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"monkey"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\monkey\.vervet monkey.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_monkey_o
+                                            on_release:root.like_list("monkey")
+                                        HandBut:
+                                            id:hand_monkey_o
+                                            on_release:root.fav_list("monkey")
+                                        BookBut:
+                                            id:book_monkey_o
+                                            on_release:root.liber_list("monkey")  
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"wolf"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\wolf\.eurasian wolf.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_wolf_o
+                                            on_release:root.like_list("wolf")
+                                        HandBut:
+                                            id:hand_wolf_o
+                                            on_release:root.fav_list("wolf")
+                                        BookBut:
+                                            id:book_wolf_o
+                                            on_release:root.liber_list("wolf")   
+
+                                    
+                        #cute animal
+                        
+                        MDCard:
+                            orienation:"vetical"
+                            radius:[10,]
+                            size_hint_y:None
+                            height:50
+
+                            Label:
+                                text:"[b]cute animal[/b]"
+                                markup:True
+                                font_size:18
+                        
+                        Scroller:#silder
+                            
+                            Box_album:#boxlayout
+                            
+                                OCard_album:
+                                    ICard_album:
+                                        text:"cat"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\cat\.cute cats.jpg"                                
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_cat_t
+                                            on_release:root.like_list("cat")
+                                        HandBut:
+                                            id:hand_cat_t
+                                            on_release:root.fav_list("cat")
+                                        BookBut:
+                                            id:book_cat_t
+                                            on_release:root.liber_list("cat")                                                             
+                                
+                                OCard_album:
+                                    ICard_album:
+                                        text:"dog"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\dog\.german shepherd.jpg"
+                                               
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_dog_t
+                                            on_release:root.like_list("dog")
+                                        HandBut:
+                                            id:hand_dog_t
+                                            on_release:root.fav_list("dog")
+                                        BookBut:
+                                            id:book_dog_t
+                                            on_release:root.liber_list("dog")  
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"rabbit"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\rabbit\.flemish giant rabbit.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_rabbit_o
+                                            on_release:root.like_list("rabbit")
+                                        HandBut:
+                                            id:hand_rabbit_o
+                                            on_release:root.fav_list("rabbit")
+                                        BookBut:
+                                            id:book_rabbit_o
+                                            on_release:root.liber_list("rabbit")
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"parrot"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\parrot\.lovebirds.jpg"   
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_parrot_o
+                                            on_release:root.like_list("parrot")
+                                        HandBut:
+                                            id:hand_parrot_o
+                                            on_release:root.fav_list("parrot")
+                                        BookBut:
+                                            id:book_parrot_o
+                                            on_release:root.liber_list("parrot")   
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"hamster"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\hamster\.syrian hamster.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_hamster_o
+                                            on_release:root.like_list("hamster")
+                                        HandBut:
+                                            id:hand_hamster_o
+                                            on_release:root.fav_list("hamster")
+                                        BookBut:
+                                            id:book_hamster_o
+                                            on_release:root.liber_list("hamster")
+                                    
+                                OCard_album:
+                                    ICard_album:
+                                        text:"turtle"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\turtle\.green sea turtle.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_turtle_o
+                                            on_release:root.like_list("turtle")
+                                        HandBut:
+                                            id:hand_turtle_o
+                                            on_release:root.fav_list("turtle")
+                                        BookBut:
+                                            id:book_turtle_o
+                                            on_release:root.liber_list("turtle")
+
+                            
+                        
+                        #sea animal    
+                        
+                        MDCard:
+                            orienation:"vetical"
+                            radius:[10,]
+                            size_hint_y:None
+                            height:50
+
+                            Label:
+                                text:"[b]sea animal[/b]"
+                                markup:True
+                                font_size:18
+
+                        Scroller:#silder
+
+                            Box_album:#boxlayout
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"whale"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:                       
+                                            source: r"anima\whale\.gray whale.jpg"                                
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_whale_o
+                                            on_release:root.like_list("whale")
+                                        HandBut:
+                                            id:hand_whale_o
+                                            on_release:root.fav_list("whale")
+                                        BookBut:
+                                            id:book_whale_o
+                                            on_release:root.liber_list("whale")                                                         
+                                
+                                OCard_album:
+                                    ICard_album:
+                                        text:"crab"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\crab\.cancer pagurus.jpg"
+                                               
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_crab_o
+                                            on_release:root.like_list("crab")
+                                        HandBut:
+                                            id:hand_crab_o
+                                            on_release:root.fav_list("crab")
+                                        BookBut:
+                                            id:book_crab_o
+                                            on_release:root.liber_list("crab")             
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"seal"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\seal\.harbor seal.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_seal_o
+                                            on_release:root.like_list("seal")
+                                        HandBut:
+                                            id:hand_seal_o
+                                            on_release:root.fav_list("seal")
+                                        BookBut:
+                                            id:book_seal_o
+                                            on_release:root.liber_list("seal")
+                                    
+                                OCard_album:
+                                    ICard_album:
+                                        text:"turtle"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\turtle\.green sea turtle.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_turtle_t
+                                            on_release:root.like_list("turtle")
+                                        HandBut:
+                                            id:hand_turtle_t
+                                            on_release:root.fav_list("turtle")
+                                        BookBut:
+                                            id:book_turtle_t
+                                            on_release:root.liber_list("turtle")
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"alligator"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\alligator\.alligator.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_alligator_o
+                                            on_release:root.like_list("alligator")
+                                        HandBut:
+                                            id:hand_alligator_o
+                                            on_release:root.fav_list("alligator")
+                                        BookBut:
+                                            id:book_alligator_o
+                                            on_release:root.liber_list("alligator")  
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"dolphin"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album: 
+                                            source: r"anima\dolphin\.dolphin.jpg"   
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_dolphin_o
+                                            on_release:root.like_list("dolphin")
+                                        HandBut:
+                                            id:hand_dolphin_o
+                                            on_release:root.fav_list("dolphin")
+                                        BookBut:
+                                            id:book_dolphin_o
+                                            on_release:root.liber_list("dolphin")   
+                  
+                            
+                     
+                        #brid animal
+                        
+                        MDCard:
+                            orienation:"vetical"
+                            radius:[10,]
+                            size_hint_y:None
+                            height:50
+
+                            Label:
+                                text:"[b]brid animal[/b]"
+                                markup:True
+                                font_size:18
+                        
+                    
+                        Scroller:#silder
+                            
+                            Box_album:#boxlayout
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"chicken"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:                       
+                                            source: r"anima\chicken\.brahma.jpg"                                
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_chicken_o
+                                            on_release:root.like_list("chicken")
+                                        HandBut:
+                                            id:hand_chicken_o
+                                            on_release:root.fav_list("chicken")
+                                        BookBut:
+                                            id:book_chicken_o
+                                            on_release:root.liber_list("chicken")                                                             
+                                
+                                OCard_album:
+                                    ICard_album:
+                                        text:"parrot"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\parrot\.lovebirds.jpg"
+                                               
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_parrot_t
+                                            on_release:root.like_list("parrot")
+                                        HandBut:
+                                            id:hand_parrot_t
+                                            on_release:root.fav_list("parrot")
+                                        BookBut:
+                                            id:book_parrot_t
+                                            on_release:root.liber_list("parrot")             
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"penguin"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\penguin\.adélie penguin.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_penguin_o
+                                            on_release:root.like_list("penguin")
+                                        HandBut:
+                                            id:hand_penguin_o
+                                            on_release:root.fav_list("penguin")
+                                        BookBut:
+                                            id:book_penguin_o
+                                            on_release:root.liber_list("penguin")
+                                    
+                                OCard_album:
+                                    ICard_album:
+                                        text:"peacock"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\peacock\.indian peafowl.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_peacock_o
+                                            on_release:root.like_list("peacock")
+                                        HandBut:
+                                            id:hand_peacock_o
+                                            on_release:root.fav_list("peacock")
+                                        BookBut:
+                                            id:book_peacock_o
+                                            on_release:root.liber_list("peacock") 
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"crow"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\crow\.torresian crow.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_crow_o
+                                            on_release:root.like_list("crow")
+                                        HandBut:
+                                            id:hand_crow_o
+                                            on_release:root.fav_list("crow")
+                                        BookBut:
+                                            id:book_crow_o
+                                            on_release:root.liber_list("crow")
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"owl"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album: 
+                                            source: r"anima\owl\.eastern screech owl.jpg" 
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_owl_o
+                                            on_release:root.like_list("owl")
+                                        HandBut:
+                                            id:hand_owl_o
+                                            on_release:root.fav_list("owl")
+                                        BookBut:
+                                            id:book_owl_o
+                                            on_release:root.liber_list("owl")
+
+                                           
+
+                            
+                        #veg animal
+                        
+                        MDCard:
+                            orienation:"vetical"
+                            radius:[10,]
+                            size_hint_y:None
+                            height:50
+
+                            Label:
+                                text:"[b]veg animal[/b]"
+                                markup:True
+                                font_size:18
+
+                        Scroller:#silder
+
+                            Box_album:#boxlayout
+        
+                                OCard_album:
+                                    ICard_album:
+                                        text:"monkey"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:                       
+                                            source: r"anima\monkey\.vervet monkey.jpg"                                
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_monkey_t
+                                            on_release:root.like_list("monkey")
+                                        HandBut:
+                                            id:hand_monkey_t
+                                            on_release:root.fav_list("monkey")
+                                        BookBut:
+                                            id:book_monkey_t
+                                            on_release:root.liber_list("monkey")                                                             
+                                
+                                OCard_album:
+                                    ICard_album:
+                                        text:"donkey"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\donkey\.mule donkey.jpg"
+                                               
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_donkey_o
+                                            on_release:root.like_list("donkey")
+                                        HandBut:
+                                            id:hand_donkey_o
+                                            on_release:root.fav_list("donkey")
+                                        BookBut:
+                                            id:book_donkey_o
+                                            on_release:root.liber_list("donkey")           
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"elephant"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\elephant\.loxodonta atlantica.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_elephant_o
+                                            on_release:root.like_list("elephant")
+                                        HandBut:
+                                            id:hand_elephant_o
+                                            on_release:root.fav_list("elephant")
+                                        BookBut:
+                                            id:book_elephant_o
+                                            on_release:root.liber_list("elephant")
+                                    
+                                OCard_album:
+                                    ICard_album:
+                                        text:"deer"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\deer\.roe deer.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_deer_o
+                                            on_release:root.like_list("deer")
+                                        HandBut:
+                                            id:hand_deer_o
+                                            on_release:root.fav_list("deer")
+                                        BookBut:
+                                            id:book_deer_o
+                                            on_release:root.liber_list("deer")
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"bull"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\bull\.gaur.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_bull_t
+                                            on_release:root.like_list("bull")
+                                        HandBut:
+                                            id:hand_bull_t
+                                            on_release:root.fav_list("bull")
+                                        BookBut:
+                                            id:book_bull_t
+                                            on_release:root.liber_list("bull")  
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"zebra"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album: 
+                                            source: r"anima\zebra\.chapman's zebra.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_zebra_o
+                                            on_release:root.like_list("zebra")
+                                        HandBut:
+                                            id:hand_zebra_o
+                                            on_release:root.fav_list("zebra")
+                                        BookBut:
+                                            id:book_zebra_o
+                                            on_release:root.liber_list("zebra")   
+
+
+                            
+                        #mammal animal
+                        
+                        MDCard:
+                            orienation:"vetical"
+                            radius:[10,]
+                            size_hint_y:None
+                            height:50
+
+                            Label:                                
+                                text:"[b]mammal animal[/b]"
+                                markup:True
+                                font_size:18
+
+                    
+                        Scroller:#silder 
+
+                            Box_album:#boxlayout
+                    
+                                OCard_album:
+                                    ICard_album:
+                                        text:"cow"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:                       
+                                            source: r"anima\cow\.sahiwal cattle.jpg"                                
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_cow_t
+                                            on_release:root.like_list("cow")
+                                        HandBut:
+                                            id:hand_cow_t
+                                            on_release:root.fav_list("cow")
+                                        BookBut:
+                                            id:book_cow_t
+                                            on_release:root.liber_list("cow")                                                           
+                                
+                                OCard_album:
+                                    ICard_album:
+                                        text:"dog"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\dog\.german shepherd.jpg"
+                                               
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_dog_th
+                                            on_release:root.like_list("dog")
+                                        HandBut:
+                                            id:hand_dog_th
+                                            on_release:root.fav_list("dog")
+                                        BookBut:
+                                            id:book_dog_th
+                                            on_release:root.liber_list("dog")           
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"wolf"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\wolf\.eurasian wolf.jpg"
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_wolf_t
+                                            on_release:root.like_list("wolf")
+                                        HandBut:
+                                            id:hand_wolf_t
+                                            on_release:root.fav_list("wolf")
+                                        BookBut:
+                                            id:book_wolf_t
+                                            on_release:root.liber_list("wolf")
+                                    
+                                OCard_album:
+                                    ICard_album:
+                                        text:"monkey"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\monkey\.vervet monkey.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_monkey_th
+                                            on_release:root.like_list("monkey")
+                                        HandBut:
+                                            id:hand_monkey_th
+                                            on_release:root.fav_list("monkey")
+                                        BookBut:
+                                            id:book_monkey_th
+                                            on_release:root.liber_list("monkey") 
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"lion"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\lion\.transvaal lion.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_lion_o
+                                            on_release:root.like_list("lion")
+                                        HandBut:
+                                            id:hand_lion_o
+                                            on_release:root.fav_list("lion")
+                                        BookBut:
+                                            id:book_lion_o
+                                            on_release:root.liber_list("lion") 
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"horse"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album: 
+                                            source: r"anima\horse\.andalusian horse.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_horse_t
+                                            on_release:root.like_list("horse")
+                                        HandBut:
+                                            id:hand_horse_t
+                                            on_release:root.fav_list("horse")
+                                        BookBut:
+                                            id:book_horse_t
+                                            on_release:root.liber_list("horse")
+
+                                        
+
+                        # reptile animal
+                        
+                        MDCard:
+                            orienation:"vetical"
+                            radius:[10,]
+                            size_hint_y:None
+                            height:50
+
+                            Label:
+                                text:"[b]reptile animal[/b]"
+                                markup:True
+                                font_size:18
+                        
+            
+                        Scroller:#silder
+
+                            Box_album:#boxlayout
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"frog"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:                       
+                                            source: r"anima\frog\.hylidae.jpg"                                
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_frog_o
+                                            on_release:root.like_list("frog")
+                                        HandBut:
+                                            id:hand_frog_o
+                                            on_release:root.fav_list("frog")
+                                        BookBut:
+                                            id:book_frog_o
+                                            on_release:root.liber_list("frog")                                                             
+                                
+                                OCard_album:
+                                    ICard_album:
+                                        text:"alligator"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\alligator\.alligator.jpg"
+                                               
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_alligator_t
+                                            on_release:root.like_list("alligator")
+                                        HandBut:
+                                            id:hand_alligator_t
+                                            on_release:root.fav_list("alligator")
+                                        BookBut:
+                                            id:book_alligator_t
+                                            on_release:root.liber_list("alligator")           
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"crab"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\crab\.cancer pagurus.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_crab_t
+                                            on_release:root.like_list("crab")
+                                        HandBut:
+                                            id:hand_crab_t
+                                            on_release:root.fav_list("crab")
+                                        BookBut:
+                                            id:book_crab_t
+                                            on_release:root.liber_list("crab")
+                                    
+                                OCard_album:
+                                    ICard_album:
+                                        text:"snake"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\snake\.black mamba.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_snake_o
+                                            on_release:root.like_list("snake")
+                                        HandBut:
+                                            id:hand_snake_o
+                                            on_release:root.fav_list("snake")
+                                        BookBut:
+                                            id:book_snake_o
+                                            on_release:root.liber_list("snake")
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"seal"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\seal\.harbor seal.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_seal_t
+                                            on_release:root.like_list("seal")
+                                        HandBut:
+                                            id:hand_seal_t
+                                            on_release:root.fav_list("seal")
+                                        BookBut:
+                                            id:book_seal_t
+                                            on_release:root.liber_list("seal") 
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"turtle"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album: 
+                                            source: r"anima\turtle\.green sea turtle.jpg"   
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_turtle_th
+                                            on_release:root.like_list("turtle")
+                                        HandBut:
+                                            id:hand_turtle_th
+                                            on_release:root.fav_list("turtle")
+                                        BookBut:
+                                            id:book_turtle_th
+                                            on_release:root.liber_list("turtle")  
+                                
+                            
+                        
+                        #big animal
+                        
+                        MDCard:
+                            orienation:"vetical"
+                            radius:[10,]
+                            size_hint_y:None
+                            height:50
+
+                            Label:
+                                text:"[b]big animal[/b]"
+                                markup:True
+                                font_size:18
+
+                        Scroller:#silder 
+
+                            Box_album:#boxlayout
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"giraffe"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:                       
+                                            source: r"anima\giraffe\.northern giraffe.jpg"                                
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_giraffe_o
+                                            on_release:root.like_list('giraffe')
+                                        HandBut:
+                                            id:hand_giraffe_o
+                                            on_release:root.fav_list('giraffe')
+                                        BookBut:
+                                            id:book_giraffe_o
+                                            on_release:root.liber_list('giraffe')                                                            
+                                
+                                OCard_album:
+                                    ICard_album:
+                                        text:"elephant"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\elephant\.loxodonta atlantica.jpg"
+                                               
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_elephant_t
+                                            on_release:root.like_list("elephant")
+                                        HandBut:
+                                            id:hand_elephant_t
+                                            on_release:root.fav_list("elephant")
+                                        BookBut:
+                                            id:book_elephant_t
+                                            on_release:root.liber_list("elephant")           
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"whale"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\whale\.gray whale.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_whale_t
+                                            on_release:root.like_list("whale")
+                                        HandBut:
+                                            id:hand_whale_t
+                                            on_release:root.fav_list("whale")
+                                        BookBut:
+                                            id:book_whale_t
+                                            on_release:root.liber_list("whale")
+                                    
+                                OCard_album:
+                                    ICard_album:
+                                        text:"gorilla"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\gorilla\.western gorilla.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_gorilla_o
+                                            on_release:root.like_list("gorilla")
+                                        HandBut:
+                                            id:hand_gorilla_o
+                                            on_release:root.fav_list("gorilla")
+                                        BookBut:
+                                            id:book_gorilla_o
+                                            on_release:root.liber_list("gorilla")
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"cow"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\cow\.sahiwal cattle.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_cow_th
+                                            on_release:root.like_list("cow")
+                                        HandBut:
+                                            id:hand_cow_th
+                                            on_release:root.fav_list("cow")
+                                        BookBut:
+                                            id:book_cow_th
+                                            on_release:root.liber_list("cow")
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"bull"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album: 
+                                            source: r"anima\bull\.gaur.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_bull_o
+                                            on_release:root.like_list("bull")
+                                        HandBut:
+                                            id:hand_bull_o
+                                            on_release:root.fav_list("bull")
+                                        BookBut:
+                                            id:book_bull_o
+                                            on_release:root.liber_list("bull")  
+                                                                          
+                        # small animal
+                        
+                        MDCard:
+                            orienation:"vetical"
+                            radius:[10,]
+                            size_hint_y:None
+                            height:50
+
+                            Label:
+                                text:"[b]small animal[/b]"
+                                markup:True
+                                font_size:18
+                        
+                        Scroller:#silder
+
+                            Box_album:#boxlayout
+
+                                OCard_album:
+                                
+                                    ICard_album:
+                                        text:"frog"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:                       
+                                            source: r"anima\frog\.hylidae.jpg"                                
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_frog_t
+                                            on_release:root.like_list('frog')
+                                        HandBut:
+                                            id:hand_frog_t
+                                            on_release:root.fav_list('frog')
+                                        BookBut:
+                                            id:book_frog_t
+                                            on_release:root.liber_list('frog')                                                             
+                                
+                                OCard_album:
+                                    ICard_album:
+                                        text:"parrot"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\parrot\.lovebirds.jpg"
+                                               
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_parrot_th
+                                            on_release:root.like_list("parrot")
+                                        HandBut:
+                                            id:hand_parrot_th
+                                            on_release:root.fav_list("parrot")
+                                        BookBut:
+                                            id:book_parrot_th
+                                            on_release:root.liber_list("parrot")        
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"mouse"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\mouse\.house mouse.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_mouse_o
+                                            on_release:root.like_list("mouse")
+                                        HandBut:
+                                            id:hand_mouse_o
+                                            on_release:root.fav_list("mouse")
+                                        BookBut:
+                                            id:book_mouse_o
+                                            on_release:root.liber_list("mouse")
+                                    
+                                OCard_album:
+                                    ICard_album:
+                                        text:"monkey"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\monkey\.vervet monkey.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_monkey_f         
+                                            on_release:root.like_list("monkey")
+                                        HandBut:
+                                            id:hand_monkey_f
+                                            on_release:root.fav_list("monkey")
+                                        BookBut:
+                                            id:book_monkey_f
+                                            on_release:root.liber_list("monkey")
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"owl"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album:
+                                            source: r"anima\owl\.eastern screech owl.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_owl_t
+                                            on_release:root.like_list("owl")
+                                        HandBut:
+                                            id:hand_owl_t
+                                            on_release:root.fav_list("owl")
+                                        BookBut:
+                                            id:book_owl_t
+                                            on_release:root.liber_list("owl")  
+
+                                OCard_album:
+                                    ICard_album:
+                                        text:"rabbit"
+                                        on_release:root.cardmd(self)
+                                        on_release:root.history_list(self)
+                                        Fit_album: 
+                                            source: r"anima\rabbit\.flemish giant rabbit.jpg"
+
+                                    MDBoxLayout:  
+                                        orientation: 'horizontal'
+                                        adaptive_height: True
+                                        HeartBut:
+                                            id:heart_rabbit_t 
+                                            on_release:root.like_list("rabbit")
+                                        HandBut:
+                                            id:hand_rabbit_t
+                                            on_release:root.fav_list("rabbit")
+                                        BookBut:
+                                            id:book_rabbit_t
+                                            on_release:root.liber_list("rabbit")  
+
+                        
+                        
+
+            #this is for favorite tap
+            MDBottomNavigationItem:
+                name:'fav'
+                text:"favorite"
+                icon:"heart-circle"
+
+                ScrollView:
+                    GridLayout:
+                        id:animal_fav
+                        cols:3
+                        spacing:20
+                        padding:30
+                        size_hint_y: None
+                        height: 600
+
+                        Label:
+                            text: "[b]None[/b]"
+                            id:None_id_t
+                            markup:True
+                            font_size:18
+                            size_hint: None, None
+                            size:(150,180)
+                            canvas.before:
+                                Color:
+                                    rgba:rgba('#404040')
+                                RoundedRectangle:
+                                    size:self.size
+                                    pos:self.pos
+                                    radius: [20]
+
+            #this is for like tap
+            MDBottomNavigationItem:
+                name:'like'
+                text:"Like"
+                icon:"hand-heart"
+
+                ScrollView:
+                    GridLayout:
+                        id:animal_like
+                        cols:3
+                        spacing:20
+                        padding:30
+                        size_hint_y: None
+                        height: 600
+
+                        Label:
+                            id:None_id_o
+                            text: "[b]None[/b]"
+                            markup:True
+                            font_size:18
+                            size_hint: None, None
+                            size:150,180
+                            canvas.before:
+                                Color:
+                                    rgba:rgba('#404040')
+                                RoundedRectangle:
+                                    size:self.size
+                                    pos:self.pos
+                                    radius: [20]
+
+            #this is for libery tap
+            MDBottomNavigationItem:
+                name:'libery'
+                text:"Libery"
+                icon:"bookshelf"
+
+                ScrollView:
+                    GridLayout:
+                        id:animal_liber
+                        cols:3
+                        spacing:20
+                        padding:30
+                        size_hint_y: None
+                        height: 600
+
+                        Label:
+                            id:None_id_th
+                            text: "[b]None[/b]"
+                            markup:True
+                            font_size:18
+                            size_hint: None, None
+                            size:(150,180)
+                            canvas.before:
+                                Color:
+                                    rgba:rgba('#404040')
+                                RoundedRectangle:
+                                    size:self.size
+                                    pos:self.pos
+                                    radius: [20]
+                    
+            # this is for history tap
+            MDBottomNavigationItem:
+                name:'his'
+                text:"Histoy"
+                icon:"book-open-blank-variant"
+
+                ScrollView:
+                    GridLayout:
+                        id:animal_history
+                        cols:3
+                        spacing:20
+                        padding:30
+                        size_hint_y: None
+                        height: 600
+
+                        Label:
+                            text: "[b]None[/b]"
+                            id:None_id_f
+                            markup:True
+                            font_size:18
+                            size_hint: None, None
+                            size:150,180
+                            canvas.before:
+                                Color:
+                                    rgba:rgba('#404040')
+                                RoundedRectangle:
+                                    size:self.size
+                                    pos:self.pos
+                                    radius: [20]
+        
+
+#--------------------++++---------------------#
+
+
+# animal some clases
+#sound for class
+<Sound@MDCard>:
+    orientation: 'vertical'
+    size_hint: None, None
+    size:137,145
+    elevation:10
+    radius:[30,]
+
+<Information@Label>:
+    markup:True
+    font_size:18
+    text_size:root.width,None
+    height:self.texture_size[1]
+    size_hint_y:None
+    padding_x:15
+
+<Spec_Food@MDCard>:
+    orientation: 'vertical'
+    size_hint:None,None
+    width:150
+    height:180
+
+<Sound_icon@MDBoxLayout>
+    orientation: 'horizontal'
+    adaptive_height: True       
+        
+    MDIconButton:
+        icon:"volume-source"
+    MDIconButton:
+        icon:"restart"  
+
+<Audio_icon@MDIconButton>
+    icon:"stop-circle"
+    on_release:
+        if self.icon == "stop-circle":self.icon="pause-circle"
+        else :self.icon="stop-circle"
+
+# this is for album of animal -++++---????????
+<Animal>:
+    # spices image id 
+    spices_image:spices_img
+
+    # food image id 
+    food_image:food_img
+
+    #main image id
+    main_image:main_image
+
+    #infromation of animal id
+    infro_o:main_infro_o
+    infro_t:main_infro_t
+    infro_th:main_infro_th
+    infro_f:main_infro_f
+    infro_fi:main_infro_fi
+
+    #auido sound id
+    audio_o:audio_o
+    audio_t:audio_t
+    audio_th:audio_th
+    audio_f:audio_f
+    audio_fi:audio_fi
+    audio_s:audio_s
+    audio_se:audio_se
+    audio_e:audio_e
+    audio_n:audio_n
+
+    #bottom cards id
+    cards_o:cards_o
+    cards_t:cards_t
+    cards_th:cards_th
+
+    #bottom cards image id
+    card_image_o:card_image_o
+    card_image_t:card_image_t
+    card_image_th:card_image_th
+
+    #bottom btn id of heart
+    heartbt_o:heartbt_o
+    heartbt_t:heartbt_t
+    heartbt_th:heartbt_th
+
+    #bottom btn id of hand
+    handbt_o:handbt_o 
+    handbt_t:handbt_t
+    handbt_th:handbt_th
+
+    #bottom btn id of book
+    booktbt_o:booktbt_o
+    booktbt_t:booktbt_t
+    booktbt_th:booktbt_th
+    
+
+    BoxLayout:
+        orientation:"vertical"
+        MDToolbar:
+            title:"ANIMAL"
+            # left_action_items:[["arrow-left", lambda x: app.creating("front")]]
+            left_action_items:[["arrow-left", lambda x: root.icon_change()]]
+
+        ScrollView:
+            BoxLayout:
+                orientation:"vertical"
+                padding:25
+                spacing:20
+                size_hint_y:None
+                height:2500
+                
+                BoxLayout:
+                    orientation:"horizontal"
+
+                    FitImage:
+                        id:main_image
+                        source:"anima/lion/.transvaal lion.jpg"
+                        radius:[20,]
+                    
+                    Information:
+                        id:main_infro_o
+                        text:"[b]Kingdom[/b] : Animalia\n[b]Class[/b] : Mammailia\n[b]Lifespan[/b] : 10-15years\n[b]Height[/b] : 90-100cm\n[b]Family[/b] : Felidae\n[b]Species[/b] : 1\n"
+                        halign:"left"
+                        padding_x:20
+                
+                Information:
+                    id:main_infro_t
+                    text:"[b]Behavouir:[/b]\n \n     Lions are highly territorial and occupy the same area for generations. Females actively defend their territories against other females, while resident males protect prides from rival coalitions. Territory size depends on prey abundance, as well as access to water and denning sites."
+            
+                Information:
+                    id:main_infro_th
+                    text:"[b]Communication:[/b]\n \n     Lions communicate in many different ways using sounds like roars, grunts, moans, growls, snarls, purrs, hums, puffs and woofs, as well as body language. Each sound and gesture has a different meaning. ... Life in Africa is good: Lions and lionesses purr and lick or gnaw at each other."
+            
+                Information:
+                    id:main_infro_f
+                    text:"[b]Intellignce[/b]\n \n     In a follow-up experiment using a similar conceptual puzzle, lions outperformed leopards and tigers (which are both solitary big cats)—more evidence for the social intelligence hypothesis. But Borrego acknowledges that habitat and diet could also be factors in cognitive evolution."
+
+                Information:
+                    id:main_infro_fi
+                    text:"[b]Food[/b]\n \n     Lions are carnivores, which means they are animals that only eat meat. Some of the types of prey they catch include birds, hares, turtles, mice, lizards, wild hogs, wild dogs, antelopes, cheetahs, buffaloes, leopards, crocodiles, baby elephants, rhinoceros, hippopotamuses, and  tall giraffes!"
+
+                # Sounds
+                MDCard:
+                    orientation: 'vertical'
+                    radius:[20,]
+                    size_hint_y:None
+                    height:50 
+                    Label:
+                        text:"[b]Sounds[/b]"
+                        markup:True
+                        font_size:18
+                
+                # GridLayout:
+                GridLayout:
+                    # orientation: 'vertical'
+                    cols:3
+                    padding:15
+                    size_hint_y:None
+                    height: 500
+                    spacing:15
+                        
+                    Sound:
+                        FitImage:
+                            source: r"something/happy.jpg"
+                            radius:[30,]
+
+                        Sound_icon:
+                            Audio_icon:
+                                id:audio_o
+                                text:"hola"
+
+                    Sound:
+                        FitImage:
+                            source: r"something/sad.jpg"
+                            radius:[30,]
+
+                        Sound_icon:
+                            Audio_icon:
+                                id:audio_t                           
+                    
+                    Sound:
+                        FitImage:
+                            source: r"something/enjoy.jpg"
+                            radius:[30,]
+                            
+                        Sound_icon:
+                            Audio_icon:
+                                id:audio_th
+                            
+                    Sound:
+                        FitImage:
+                            source: r"something/fun.jpg"
+                            radius:[30,]
+                            
+                        Sound_icon:
+                            Audio_icon:
+                                id:audio_f
+                            
+                    Sound:
+                        FitImage:
+                            source: r"something/angry.jpg"
+                            radius:[30,]
+                            
+                        Sound_icon:
+                            Audio_icon:
+                                id:audio_fi
+                            
+                    Sound:
+                        FitImage:
+                            source: r"something/hungry.jpg"
+                            radius:[30,]
+                            
+                        Sound_icon:
+                            Audio_icon:
+                                id:audio_s
+
+                    Sound:
+                        FitImage:
+                            source: r"something/normal.jpg"
+                            radius:[30,]
+                            
+                        Sound_icon:
+                            Audio_icon:
+                                id:audio_se
+                            
+                    Sound:
+                        FitImage:
+                            source: r"something/play.jpg"
+                            radius:[30,]
+                            
+                        Sound_icon:
+                            Audio_icon:
+                                id:audio_e
+                            
+                    Sound:
+                        FitImage:
+                            source: r"something/fair.jpg"
+                            radius:[30,]
+
+                        Sound_icon:
+                            Audio_icon:
+                                id:audio_n
+                            
+                # Species   
+                MDCard:
+                    orientation: 'vertical'
+                    radius:[20,]
+                    size_hint_y:None
+                    height:50 
+                    Label:
+                        text: "[b]Spieces[/b]"
+                        markup:True
+                        font_size:18
+
+                Scroller:
+
+                    BoxLayout:
+                        orientation: 'horizontal'
+                        spacing:15
+                        padding:10
+                        size_hint_x: None
+                        width:2000
+                        id:spices_img
+
+
+                #food 
+                MDCard:
+                    orientation: 'vertical'
+                    radius:[20,]
+                    size_hint_y:None
+                    height:50 
+                    Label:
+                        text:"[b]Food[/b]"
+                        markup:True
+                        font_size:18
+
+                Scroller:
+                    BoxLayout:
+                        orientation: 'horizontal'
+                        spacing:15
+                        padding:10
+                        size_hint_x: None
+                        width:2000
+                        id:food_img
+
+                # you what different anima
+                MDCard:
+                    orientation: 'vertical'
+                    radius:[20,]
+                    size_hint_y:None
+                    height:50 
+                    Label:
+                        text:"[b]you what different animal[/b]"
+                        markup:True
+                        font_size:18
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    padding:20
+                    spacing:10
+                    size_hint_y:None
+                    height: 200
+
+                    OCard_album:
+                        ICard_album:
+                            id:cards_o
+                            text:"cat"
+                            on_release:root.cardmd(self)
+                            on_release:app.root.get_screen('front').history_list(self)
+                            Fit_album:
+                                id:card_image_o
+                                source: r"anima\cat\.cute cats.jpg"
+
+                        MDBoxLayout:  
+                            orientation: 'horizontal'
+                            adaptive_height: True
+                            HeartBut:
+                                id:heartbt_o
+                                on_release:root.bottom_but(self,"cards_o","heart")
+                            HandBut:
+                                id:handbt_o 
+                                on_release:root.bottom_but(self,"cards_o","hand")
+                            BookBut:
+                                id:booktbt_o
+                                on_release:root.bottom_but(self,"cards_o","book")
+
+                    OCard_album:
+                        ICard_album:
+                            id:cards_t
+                            text:"dog"
+                            on_release:root.cardmd(self)
+                            on_release:app.root.get_screen('front').history_list(self)
+                            Fit_album:
+                                id:card_image_t
+                                source: r"anima\dog\.german shepherd.jpg"   
+
+                        MDBoxLayout:  
+                            orientation: 'horizontal'
+                            adaptive_height: True
+                            HeartBut:
+                                id:heartbt_t
+                                on_release:root.bottom_but(self,"cards_t","heart")
+                            HandBut:
+                                id:handbt_t
+                                on_release:root.bottom_but(self,"cards_t","hand")
+                            BookBut:
+                                id:booktbt_t
+                                on_release:root.bottom_but(self,"cards_t","book") 
+
+                    OCard_album:
+                        ICard_album:
+                            id:cards_th
+                            text:"deer"
+                            on_release:root.cardmd(self)
+                            on_release:app.root.get_screen('front').history_list(self)
+                            Fit_album:
+                                id:card_image_th
+                                source: r"anima\deer\.roe deer.jpg"
+
+                        MDBoxLayout:  
+                            orientation: 'horizontal'
+                            adaptive_height: True
+                            HeartBut:
+                                id:heartbt_th
+                                on_release:root.bottom_but(self,"cards_th","heart")
+                            HandBut:
+                                id:handbt_th
+                                on_release:root.bottom_but(self,"cards_th","hand")
+                            BookBut:
+                                id:booktbt_th
+                                on_release:root.bottom_but(self,"cards_th","book")
+
+                
+#--------------------++++---------------------#
+
+
+#peersnal perofile of person-++++---????????
+<Navbar>:
+    BoxLayout:
+        orientation:"vertical"
+        MDToolbar:
+            title:"Porfile"
+            left_action_items:[["arrow-left", lambda x: app.creating("front")]]
+
+        BoxLayout:
+            orientation:"vertical"
+            spacing:30
+            padding:30
+            BoxLayout:
+                orientation:"horizontal"
+
+                Label:
+                    size_hint:None,None
+                    background_normal:""
+                    canvas.before:
+                        Ellipse:
+                            angle_start:0
+                            angle_end:400
+                            size:100,100
+                            pos:root.width/4.8, self.y-8
+                            source:"something/sweety.jpg"
+
+                Label: 
+                    markup:True
+                    text:" [b]Sweety A.i.[/b]\n [size=16][i]@kali14789.gmail.com[/i][/size]"
+                    font_size:20
+                    halign:'left'
+        
+            Navbut:
+                text:"[b]Theme[/b]"
+
+            Navbut:
+                text:"[b]Setting[/b]"       
+        
+            Navbut:
+                text:"[b]Edit[/b]"
+
+            Navbut:
+                text:"[b]exit[/b]"
+                on_press:app.creating("front")
+
+#this is for navber Button ok! :>        
+<Navbut@Button>:
+    markup:True
+    font_size:18
+    size_hint:1,.5
+    background_color:0,0,0,0
+    canvas.before:
+        Color:
+            rgba:rgba('#808080')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[10]
+        
+
+
+
+
+
+
+

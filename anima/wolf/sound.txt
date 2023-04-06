@@ -1,0 +1,9 @@
+anima/wolf/angry.mp3
+anima/wolf/enjoy.wav
+anima/wolf/fair.wav
+anima/wolf/fun.mp3
+anima/wolf/happy.mp3
+anima/wolf/hungry.wav
+anima/wolf/normal.wav
+anima/wolf/play.wav
+anima/wolf/sad.wav

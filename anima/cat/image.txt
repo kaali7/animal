@@ -1,0 +1,10 @@
+anima/cat/.abyssinian.jpg
+anima/cat/.american bobtail.jpg
+anima/cat/.american curl.jpg
+anima/cat/.american shorthair.jpg
+anima/cat/.american wirehair.jpg
+anima/cat/.balinese.jpg
+anima/cat/.bengal.jpg
+anima/cat/.birman.jpg
+anima/cat/.bombay.jpg
+anima/cat/.cute cats.jpg
